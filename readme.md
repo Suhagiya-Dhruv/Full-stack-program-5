@@ -1,56 +1,145 @@
-# Introduction to HTML
+# HTML Elements and Their Usage
 
-HTML (HyperText Markup Language). HTML is the standard language for creating web pages and web applications. It provides the structure of a webpage, allowing you to organize and display content such as text, images, and links.
+This document explains the usage of various HTML elements demonstrated in the provided HTML code. HTML elements are the building blocks of a webpage, each serving a specific purpose to structure and display content effectively.
 
-## Basic Structure of an HTML Document
+## Semantic vs Non-semantic Tags
 
-An HTML document is made up of various elements that define the structure and content of the webpage. Here's a simple example:
+Semantic tags clearly describe their meaning in a way that both the browser and the developer can understand. Non-semantic tags do not provide any information about their contents.
 
-## Explanation of HTML Elements
-
-### Headings
-
-Headings are used to create titles and subtitles on your webpage. There are six levels of headings, from `<h1>` to `<h6>`, with `<h1>` being the highest (or most important) level and `<h6>` the lowest.
+### Example:
 
 ```html
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
+<!-- Non-semantic tag -->
+<div>hello</div>
+
+<!-- Semantic tag -->
+<header>hello</header>
+<article>Article tag</article>
+<time>time tag</time>
 ```
 
-### Block Elements
+- `<div>`: A generic container for flow content.
+- `<header>`: Represents introductory content or a set of navigational links.
+- `<article>`: Represents a self-contained composition in a document.
+- `<time>`: Represents a specific period in time.
 
-Block elements occupy the full width available and start on a new line. Common block elements include `<div>` and `<p>`.
+## Styling Tags
+
+Styling tags help emphasize or differentiate parts of the text within the document.
+
+### Example:
 
 ```html
-<div>Hello</div>
-<div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, eos.</div>
-<div>Hello 2</div>
-
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, eos.</p>
-<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, eos.</p>
+<p>Lorem ipsum dolor sit amet <b>consectetur</b> adipisicing elit. Possimus saepe sunt <i>molestias</i> impedit ratione eum doloremque suscipit laborum <u>deleniti.</u> Animi eum <b><i>aperiam</i></b> tempora laborum maiores, cum, amet delectus aut cupiditate minima a, in sed perferendis officia quis libero nam consequatur. Voluptates atque asperiores dolorem! Doloribus consequatur aliquid voluptatum ipsa molestiae.</p>
 ```
 
-### Self-Closing Tags
+- `<b>`: Makes the text bold.
+- `<i>`: Italicizes the text.
+- `<u>`: Underlines the text.
 
-Some HTML elements do not have any content and are self-closing. A common example is the line break `<br />`.
+## Subscript and Superscript Tags
+
+Subscript and superscript tags are used to specify text that should be displayed as subscript or superscript respectively.
+
+### Example:
 
 ```html
-<br />
+<p>H<sub>2</sub>O</p>
+<p>a<sup>2</sup>+b<sup>2</sup></p>
 ```
 
-### Inline Elements
+- `<sub>`: Defines subscript text.
+- `<sup>`: Defines superscript text.
 
-Inline elements do not start on a new line and only take up as much width as necessary. Common inline elements include `<span>`.
+## List Tags
+
+HTML provides various list elements to define different types of lists.
+
+### Unordered List
+
+An unordered list is a collection of items where the order does not matter.
 
 ```html
-<span>Hello</span>
-<span>Hello 2</span>
+<ul type="square">
+    <li>Item 1</li>
+    <li>Item 1</li>
+    <li>
+        type of
+        <ul>
+            <li>item 1</li>
+        </ul>
+    </li>
+    <li>Item 1</li>
+</ul>
 ```
 
-## Conclusion
+- `<ul>`: Defines an unordered list.
+- `<li>`: Defines a list item.
 
-This introduction covers the basic structure and essential elements of an HTML document. Understanding these foundational elements is crucial as we move forward with more complex HTML concepts. For a comprehensive reference, you can visit [HTML Reference](https://htmlreference.io/).
+### Ordered List
+
+An ordered list is a collection of items where the order does matter.
+
+```html
+<ol type="i" start="5">
+    <li>item 1</li>
+    <li>item 1</li>
+    <li>item 1</li>
+    <li>item 1</li>
+</ol>
+```
+
+- `<ol>`: Defines an ordered list.
+- `<li>`: Defines a list item.
+
+### Description List
+
+A description list is used to display name/value pairs such as terms and definitions.
+
+```html
+<dl>
+    <dt>Title</dt>
+    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic molestiae explicabo ipsam sequi quos minus nihil accusantium quidem sapiente libero similique, possimus, recusandae neque quisquam ipsum, incidunt placeat iste ab.</dd>
+    <dt>Title</dt>
+    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic molestiae explicabo ipsam sequi quos minus nihil accusantium quidem sapiente libero similique, possimus, recusandae neque quisquam ipsum, incidunt placeat iste ab.</dd>
+</dl>
+```
+
+- `<dl>`: Defines a description list.
+- `<dt>`: Defines a term/name in a description list.
+- `<dd>`: Describes each term/name.
+
+## Button Tag
+
+The `<button>` element defines a clickable button.
+
+```html
+<button>Click</button>
+```
+
+## Anchor Tag
+
+The `<a>` element (or anchor) creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL.
+
+### Example:
+
+```html
+<a href="https://www.nasdaq.com/market-activity/stocks/googl">google</a>
+<br/>
+<a href="https://google.com" target="_blank">google</a>
+```
+
+- `href`: Specifies the URL of the page the link goes to.
+- `target="_blank"`: Opens the linked document in a new window or tab.
+
+## Horizontal Rule
+
+The `<hr>` tag defines a thematic break in an HTML page (e.g., a shift of topic).
+
+```html
+<hr/>
+```
+
+---
+
+This document provides an introduction and explanation of various HTML elements used in the example code. Understanding these elements will help you build well-structured and semantically meaningful web pages. For further details, you can refer to the [HTML Reference](https://htmlreference.io/).
