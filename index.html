@@ -2,133 +2,183 @@
 
 <head>
     <title>CSS Selector</title>
-    <!-- <link rel="stylesheet" href="./style.css" /> -->
     <style>
-        /* Element Selector */
-        /* h1 {
+        /* Descendant combinator selector */
+        /* div p{
             color: red;
         } */
 
-        /* div {
-            color: green;
-        } */
-
-        /* Class Selector */
-        /* .first-div {
-            color: red;
-        }
-
-        .second-div {
-            color: #FF00FF;
-            color: #FF0;
-            color: rgb(0, 100, 0);
-            color: rgba(0, 100, 0, 0.1);
-        }
-
-
-        .first-div{
-            font-size: 50px;
-        }
-
-        /* id selector */
-        /*
-        #first-div{
-            color: green;
-        } */
-
-        /* grouping selector */
-        /* div,
-        p,
-        span,
-        .heading {
-            background-color: green;
-        } */
-
-        /* p{
-            background-color: yellow;
-        }
-
-        span{
-            background-color: yellow;
-        } */
-
-        /* .c2{
-            color: red;
-        } */
-
-        /* multiple class selctor */
-        /* .c1.c2{
-            color: red
-        } */
-
-        /* body{
-            color: red;
-        } */
-
-        /* *{
-            color: red;
-        } */
-
-        /* .c1{
+        /* child combinator selector */
+        /* div > main{
             color: blue;
         } */
 
-        /* Attribute Selector */
-        /* input[type="email"]{
+        /* div + p{
+            color: red;
+        } */
+
+        /* div~p {
+            color: blue;
+        } */
+
+        /* div:hover {
+            color: red;
+            font-size: 20px;
+        }
+
+        a:link {
+            color: black
+        }
+
+        a:visited {
+            color: yellow;
+        }
+
+        button:hover {
             color: red;
         }
 
-        [value="name"]{
+        button:active {
             color: blue;
         } */
+
+        /* button::before {
+            content: ">";
+            color: red;
+        }
+
+        button::after {
+            content: "<";
+            color: red;
+        }
+
+        p::first-letter{
+            font-size:30px;
+            color:blue;
+        }
+
+        p::first-line{
+            color:rgb(105, 68, 255);
+        } */
+
+        /* Box Model */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .div1 {
+            width: 200px;
+            height: 200px;
+            /* border-width: 1px;
+            border-style: solid;
+            border-color: red; */
+            box-sizing: content-box;
+            /* default */
+            border: 1px solid red;
+            /*solid, dotted, dashed, double, groove, inset, outset  */
+
+            /* padding-top: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px; */
+
+            /* padding: 20px 20px 20px 20px; */
+            /* padding: 20px 20px 20px; */
+            /* padding: 20px 20px; */
+            padding: 20px;
+
+            /* margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px; */
+
+            /* margin: 20px 20px 20px 20px; */
+            /* margin: 20px 20px 20px; */
+            /* margin: 20px 20px; */
+            /* margin: 40px; */
+        }
+
+        .div2 {
+            width: 200px;
+            height: 200px;
+            /* border-width: 1px;
+            border-style: solid;
+            border-color: red; */
+            box-sizing: border-box;
+            /* default */
+            border: 1px solid red;
+            /*solid, dotted, dashed, double, groove, inset, outset  */
+
+            /* padding-top: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px; */
+
+            /* padding: 20px 20px 20px 20px; */
+            /* padding: 20px 20px 20px; */
+            /* padding: 20px 20px; */
+            padding: 20px;
+
+            /* margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px; */
+
+            /* margin: 20px 20px 20px 20px; */
+            /* margin: 20px 20px 20px; */
+            /* margin: 20px 20px; */
+            /* margin: 40px; */
+            border-radius: 4px;
+        }
     </style>
 </head>
 
 <body>
-    <!-- <h1>Heading tag</h1>
-    <h1>Second Handing</h1> -->
+
+    <!-- <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, incidunt?</p>
+        <main>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ipsam?</p>
+        </main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, aut.</p>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, error.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, error.</p>
+    <div>Div</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, error.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, error.</p> -->
 
 
-    <!-- color code 
+    <!-- <div>
+        Hello
+    </div>
 
-        #000
+    <a href="#">Click Me</a>
+    <a href="#d">Click Me</a> -->
 
-        #000000
-        #RRGGBB
-(1,67,77,216)
-        0-255
-
-    0 - F - 16
-    0 - F - 16
-    0 - F - 16
-
-    (4096)
-    
-    RGB
-    R - RED
-    G - Green
-    B - Blue -->
+    <!-- <button>Click me</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis error porro numquam natus praesentium
+        recusandae ratione explicabo quos eum nostrum odit ab optio aut, nam assumenda labore, deserunt quaerat. Hic.
+    </p> -->
 
 
+    <!-- box Model -->
 
-    <!-- <div class="first-div">First Div</div> -->
-    <!-- <div class="second-div">Second Div</div> -->
+    <!-- <div class="div1">
+        Div
+    </div>
 
-    <!-- <div class="first-div" id="first-div">First Div</div>
-    <div class="first-div">Second Div</div> -->
+-->
+    <div class="div2">
+        Div
+    </div>
 
-    <!-- <div>Div TAG</div>
-    <p>Paragraph Tag</p>
-    <span>Span Tag</span>
-    <h1 class="heading">Heading</h1> -->
-
-    <div class="c1">Hello C1</div>
-    <div class="c2">Hello C2</div>
-    <div class="c1 c2">Hello Both</div>
-
-    <input type="text" value="name" />
-    <input type="email" value="email@gamil.com" />
-
+    <!-- task : https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4tf55mc0LkYRVY5FqKqnhI-xZ2WaTiITLZp7Ee9ArnL_Mj5wzozKSXt0bi9rnVsD5rb_rp-uQfdDeELdgcOSD4kIHRJiulUMjYqdFK3U_ApC9bestfL6q0Tqy782HDRJqq7wMw9X9huUwEORFhagUkG8TqPhXkwtATs0gtG4EEMdEoHTkF9jmLp_E/s1600/Responsive%20Blog%20Post%20card%20using%20HTML%20CSS.png -->
 </body>
 
 </html>
