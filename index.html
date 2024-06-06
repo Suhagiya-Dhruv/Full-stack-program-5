@@ -1,184 +1,169 @@
 <html>
 
 <head>
-    <title>CSS Selector</title>
+    <title>Display</title>
+
     <style>
-        /* Descendant combinator selector */
-        /* div p{
-            color: red;
-        } */
-
-        /* child combinator selector */
-        /* div > main{
-            color: blue;
-        } */
-
-        /* div + p{
-            color: red;
-        } */
-
-        /* div~p {
-            color: blue;
-        } */
-
-        /* div:hover {
-            color: red;
-            font-size: 20px;
-        }
-
-        a:link {
-            color: black
-        }
-
-        a:visited {
-            color: yellow;
-        }
-
-        button:hover {
-            color: red;
-        }
-
-        button:active {
-            color: blue;
-        } */
-
-        /* button::before {
-            content: ">";
-            color: red;
-        }
-
-        button::after {
-            content: "<";
-            color: red;
-        }
-
-        p::first-letter{
-            font-size:30px;
-            color:blue;
-        }
-
-        p::first-line{
-            color:rgb(105, 68, 255);
-        } */
-
-        /* Box Model */
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        .div1 {
-            width: 200px;
-            height: 200px;
-            /* border-width: 1px;
-            border-style: solid;
-            border-color: red; */
-            box-sizing: content-box;
-            /* default */
-            border: 1px solid red;
-            /*solid, dotted, dashed, double, groove, inset, outset  */
-
-            /* padding-top: 20px;
-            padding-right: 20px;
-            padding-bottom: 20px;
-            padding-left: 20px; */
-
-            /* padding: 20px 20px 20px 20px; */
-            /* padding: 20px 20px 20px; */
-            /* padding: 20px 20px; */
-            padding: 20px;
-
-            /* margin-top: 20px;
-            margin-right: 20px;
-            margin-bottom: 20px;
-            margin-left: 20px; */
-
-            /* margin: 20px 20px 20px 20px; */
-            /* margin: 20px 20px 20px; */
-            /* margin: 20px 20px; */
-            /* margin: 40px; */
+        /* h1{
+            width:500px;
+            height: 500px;
+            padding: 50px;
+            margin: 50px;
+            background-color: red;
         }
 
-        .div2 {
+        span{
+            width:500px;
+            height: 500px;
+            padding: 50px;
+            margin: 50px;
+            background-color: blue;
+            color: white;
+        } */
+
+        /* inline, block, inline-block */
+        /* h1 {
+            display: inline-block;
+            width:100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        span{
+            display: inline-block;
+            width:100px;
+            height: 100px;
+            background-color: green;
+        } */
+
+        div {
             width: 200px;
             height: 200px;
-            /* border-width: 1px;
-            border-style: solid;
-            border-color: red; */
-            box-sizing: border-box;
+            /* border: 1px solid red; */
+            margin-bottom: 10px;
+        }
+
+        .visible {
+            overflow: visible;
             /* default */
-            border: 1px solid red;
-            /*solid, dotted, dashed, double, groove, inset, outset  */
+        }
 
-            /* padding-top: 20px;
-            padding-right: 20px;
-            padding-bottom: 20px;
-            padding-left: 20px; */
+        .hidden {
+            overflow: hidden;
+        }
 
-            /* padding: 20px 20px 20px 20px; */
-            /* padding: 20px 20px 20px; */
-            /* padding: 20px 20px; */
-            padding: 20px;
+        .scroll {
+            /* text-wrap: nowrap; */
+            overflow: scroll;
+        }
 
-            /* margin-top: 20px;
-            margin-right: 20px;
-            margin-bottom: 20px;
-            margin-left: 20px; */
+        .auto {
+            /* text-wrap: nowrap; */
+            overflow: auto;
+        }
 
-            /* margin: 20px 20px 20px 20px; */
-            /* margin: 20px 20px 20px; */
-            /* margin: 20px 20px; */
-            /* margin: 40px; */
-            border-radius: 4px;
+        .box1 {
+            background-color: lightblue;
+        }
+
+        .box2 {
+            background-color: lightgreen;
+            /* position: sticky;
+            top: 50px;
+            left: 0px; */
+            /* position: absolute; */
+            /* right: 50px; */
+            /* bottom: 0px; */
+            position: relative;
+
+        }
+
+        .box3 {
+            background-color: lightsalmon;
+        }
+
+        .child {
+            position: absolute;
+            top: 10px;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            width: 100px;
+            height: 50px;
+            border-radius: 20px;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, incidunt?</p>
-        <main>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, ipsam?</p>
-        </main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, aut.</p>
+    <!-- <h1>Heading</h1>
+
+    <span>Span Element</span> -->
+
+    <!-- overflow -->
+
+
+
+    <!-- position -->
+
+    <div class="box1">
+        box1
     </div>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, error.</p>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, error.</p>
-    <div>Div</div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, error.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, error.</p> -->
-
-
-    <!-- <div>
-        Hello
+    <div class="box2">
+        <div class="child"></div>
+        box2
     </div>
 
-    <a href="#">Click Me</a>
-    <a href="#d">Click Me</a> -->
-
-    <!-- <button>Click me</button>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis error porro numquam natus praesentium
-        recusandae ratione explicabo quos eum nostrum odit ab optio aut, nam assumenda labore, deserunt quaerat. Hic.
-    </p> -->
-
-
-    <!-- box Model -->
-
-    <!-- <div class="div1">
-        Div
+    <div class="box3">
+        box3
     </div>
 
--->
-    <div class="div2">
-        Div
+
+    <div class="visible">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptates! Officiis, dolor doloremque asperiores
+        exercitationem est vitae alias expedita iste necessitatibus incidunt quis nostrum magni, ex corporis nulla sint
+        veniam laboriosam sapiente neque! Eveniet, iusto? Illum reiciendis sapiente doloremque temporibus nemo fuga
+        impedit qui quibusdam quisquam, omnis in itaque autem?
     </div>
 
-    <!-- task : https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4tf55mc0LkYRVY5FqKqnhI-xZ2WaTiITLZp7Ee9ArnL_Mj5wzozKSXt0bi9rnVsD5rb_rp-uQfdDeELdgcOSD4kIHRJiulUMjYqdFK3U_ApC9bestfL6q0Tqy782HDRJqq7wMw9X9huUwEORFhagUkG8TqPhXkwtATs0gtG4EEMdEoHTkF9jmLp_E/s1600/Responsive%20Blog%20Post%20card%20using%20HTML%20CSS.png -->
+    <div class="hidden">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptates! Officiis, dolor doloremque asperiores
+        exercitationem est vitae alias expedita iste necessitatibus incidunt quis nostrum magni, ex corporis nulla sint
+        veniam laboriosam sapiente neque! Eveniet, iusto? Illum reiciendis sapiente doloremque temporibus nemo fuga
+        impedit qui quibusdam quisquam, omnis in itaque autem?
+    </div>
+
+    <div class="scroll">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptates! Officiis, dolor doloremque asperiores
+        exercitationem est vitae alias expedita iste necessitatibus incidunt quis nostrum magni, ex corporis nulla sint
+        veniam laboriosam sapiente neque! Eveniet, iusto? Illum reiciendis sapiente doloremque temporibus nemo fuga
+        impedit qui quibusdam quisquam, omnis in itaque autem?
+    </div>
+
+    <div class="auto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptates! Officiis, dolor doloremque asperiores
+        exercitationem est vitae alias expedita iste necessitatibus incidunt quis nostrum magni, ex corporis nulla sint
+        veniam laboriosam sapiente neque! Eveniet, iusto? Illum reiciendis sapiente doloremque temporibus nemo fuga
+        impedit qui quibusdam quisquam, omnis in itaque autem?
+    </div>
+
+    <button>Send</button>
+
+    <!-- task : https://bits.darlic.com/wp-content/uploads/sites/4/2020/07/f6c6d1c989c55113db0a2bd8a40d77dc-e1594294167516-722x390.png -->
 </body>
 
 </html>
